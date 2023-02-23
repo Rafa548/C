@@ -10,31 +10,37 @@ public class calculadora_1_1 {
             System.err.println("Calculo inválido");
             return;
         }
-
-        double num1 = Double.parseDouble(calculoSeparado[0]);
-        double num2 = Double.parseDouble(calculoSeparado[2]);
-        String operacao = calculoSeparado[1];
-        double resultado = 0;
-        switch (operacao) {
-            case "+":
-                resultado = num1 + num2;
-                System.out.println("Resultado: " + resultado);
-                break;
-            case "-":
-                resultado = num1 - num2;
-                System.out.println("Resultado: " + resultado);
-                break;
-            case "*":
-                resultado = num1 * num2;
-                System.out.println("Resultado: " + resultado);
-                break;
-            case "/":
-                resultado = num1 / num2;
-                System.out.println("Resultado: " + resultado);
-                break;
-            default:
-                System.err.println("Operação inválida");
-                break;
+        try {
+            double num1 = Double.parseDouble(calculoSeparado[0]);
+            double num2 = Double.parseDouble(calculoSeparado[2]);
+            String operacao = calculoSeparado[1];
+            double resultado = 0;
+            switch (operacao) {
+                case "+":
+                    resultado = num1 + num2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                case "*":
+                    resultado = num1 * num2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                case "/":
+                    resultado = num1 / num2;
+                    System.out.println("Resultado: " + resultado);
+                    break;
+                default:
+                    System.err.println("Operação inválida");
+                    break;
+            }
         }
+        catch (NumberFormatException e) {
+            System.err.println("Calculo inválido");
+            System.exit(0);
+        }
+        
     }
 }
