@@ -1,0 +1,10 @@
+antlr4 Hello.g4 (compilar antlr4)
+antlr4-javac  Hello*.java (compilar java)
+echo "hello compiladores" | antlr4-test Hello r -tokens (run)
+antlr4-visitor Hello Execute String (compile visitor)
+antlr4-main -v Execute.java (run visitor)
+antlr4-build  
+antlr4-run
+
+novo Execute -> mv Execute.java Execute.java.old
+
