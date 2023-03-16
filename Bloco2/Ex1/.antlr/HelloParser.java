@@ -1,4 +1,4 @@
-// Generated from Hello.g4 by ANTLR 4.12.0
+// Generated from /home/rafael/Documentos/OneDrive/Documentos/Uni-Cadeiras/2-ano/2-semestre/C/Bloco2/Ex1/Hello.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class HelloParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -88,7 +88,6 @@ public class HelloParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class PhraseContext extends ParserRuleContext {
 		public GreetingsContext greetings() {
 			return getRuleContext(GreetingsContext.class,0);
@@ -100,19 +99,6 @@ public class HelloParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_phrase; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).enterPhrase(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).exitPhrase(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof HelloVisitor ) return ((HelloVisitor<? extends T>)visitor).visitPhrase(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final PhraseContext phrase() throws RecognitionException {
@@ -151,7 +137,6 @@ public class HelloParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class GreetingsContext extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(HelloParser.ID); }
 		public TerminalNode ID(int i) {
@@ -161,19 +146,6 @@ public class HelloParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_greetings; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).enterGreetings(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).exitGreetings(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof HelloVisitor ) return ((HelloVisitor<? extends T>)visitor).visitGreetings(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final GreetingsContext greetings() throws RecognitionException {
@@ -212,7 +184,6 @@ public class HelloParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ByeContext extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(HelloParser.ID); }
 		public TerminalNode ID(int i) {
@@ -222,19 +193,6 @@ public class HelloParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bye; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).enterBye(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).exitBye(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof HelloVisitor ) return ((HelloVisitor<? extends T>)visitor).visitBye(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ByeContext bye() throws RecognitionException {
@@ -274,22 +232,13 @@ public class HelloParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0004\u0017\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
-		"\u0002\u0002\u0007\u0002\u0001\u0000\u0001\u0000\u0003\u0000\t\b\u0000"+
-		"\u0001\u0001\u0001\u0001\u0004\u0001\r\b\u0001\u000b\u0001\f\u0001\u000e"+
-		"\u0001\u0002\u0001\u0002\u0004\u0002\u0013\b\u0002\u000b\u0002\f\u0002"+
-		"\u0014\u0001\u0002\u0000\u0000\u0003\u0000\u0002\u0004\u0000\u0000\u0016"+
-		"\u0000\b\u0001\u0000\u0000\u0000\u0002\n\u0001\u0000\u0000\u0000\u0004"+
-		"\u0010\u0001\u0000\u0000\u0000\u0006\t\u0003\u0002\u0001\u0000\u0007\t"+
-		"\u0003\u0004\u0002\u0000\b\u0006\u0001\u0000\u0000\u0000\b\u0007\u0001"+
-		"\u0000\u0000\u0000\t\u0001\u0001\u0000\u0000\u0000\n\f\u0005\u0001\u0000"+
-		"\u0000\u000b\r\u0005\u0003\u0000\u0000\f\u000b\u0001\u0000\u0000\u0000"+
-		"\r\u000e\u0001\u0000\u0000\u0000\u000e\f\u0001\u0000\u0000\u0000\u000e"+
-		"\u000f\u0001\u0000\u0000\u0000\u000f\u0003\u0001\u0000\u0000\u0000\u0010"+
-		"\u0012\u0005\u0002\u0000\u0000\u0011\u0013\u0005\u0003\u0000\u0000\u0012"+
-		"\u0011\u0001\u0000\u0000\u0000\u0013\u0014\u0001\u0000\u0000\u0000\u0014"+
-		"\u0012\u0001\u0000\u0000\u0000\u0014\u0015\u0001\u0000\u0000\u0000\u0015"+
-		"\u0005\u0001\u0000\u0000\u0000\u0003\b\u000e\u0014";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\6\31\4\2\t\2\4\3"+
+		"\t\3\4\4\t\4\3\2\3\2\5\2\13\n\2\3\3\3\3\6\3\17\n\3\r\3\16\3\20\3\4\3\4"+
+		"\6\4\25\n\4\r\4\16\4\26\3\4\2\2\5\2\4\6\2\2\2\30\2\n\3\2\2\2\4\f\3\2\2"+
+		"\2\6\22\3\2\2\2\b\13\5\4\3\2\t\13\5\6\4\2\n\b\3\2\2\2\n\t\3\2\2\2\13\3"+
+		"\3\2\2\2\f\16\7\3\2\2\r\17\7\5\2\2\16\r\3\2\2\2\17\20\3\2\2\2\20\16\3"+
+		"\2\2\2\20\21\3\2\2\2\21\5\3\2\2\2\22\24\7\4\2\2\23\25\7\5\2\2\24\23\3"+
+		"\2\2\2\25\26\3\2\2\2\26\24\3\2\2\2\26\27\3\2\2\2\27\7\3\2\2\2\5\n\20\26";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

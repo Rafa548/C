@@ -1,6 +1,10 @@
+package Ex1;
 import java.io.IOException;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+
+import HelloLexer;
+import HelloParser;
 
 public class HelloMain {
    public static void main(String[] args) {
@@ -16,8 +20,8 @@ public class HelloMain {
          // replace error listener:
          //parser.removeErrorListeners(); // remove ConsoleErrorListener
          //parser.addErrorListener(new ErrorHandlingListener());
-         // begin parsing at greetings rule:
-         ParseTree tree = parser.greetings();
+         // begin parsing at phrase rule:
+         ParseTree tree = parser.phrase();
          if (parser.getNumberOfSyntaxErrors() == 0) {
             // print LISP-style tree:
             // System.out.println(tree.toStringTree(parser));
