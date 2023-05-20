@@ -1,0 +1,74 @@
+@SuppressWarnings("CheckReturnValue")
+public class Interpreter extends CalcFracBaseVisitor<Fraction> {
+
+   @Override public Fraction visitProgram(CalcFracParser.ProgramContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Fraction visitStat(CalcFracParser.StatContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Fraction visitPrint(CalcFracParser.PrintContext ctx) {
+      Fraction res = null;
+      res = visit(ctx.expr());
+      System.out.println(res);
+      return res;
+      //return res;
+   }
+
+   @Override public Fraction visitAssign(CalcFracParser.AssignContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Fraction visitExprAddSub(CalcFracParser.ExprAddSubContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Fraction visitExprParent(CalcFracParser.ExprParentContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Fraction visitExprRational(CalcFracParser.ExprRationalContext ctx) {
+      Fraction res = null;
+      Integer num1 = Integer.parseInt(visit(ctx.expr(0)).toString());
+      Integer num2 = Integer.parseInt(visit(ctx.expr(1)).toString());
+      res = new Fraction(num1, num2, false);
+      return res;
+   }
+
+   @Override public Fraction visitExprUnaryMinus(CalcFracParser.ExprUnaryMinusContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Fraction visitExprInteger(CalcFracParser.ExprIntegerContext ctx) {
+      Fraction res = null;
+      res = new Fraction(Integer.parseInt(ctx.getText()));   
+      return res;
+      //return res;
+   }
+
+   @Override public Fraction visitExprReduce(CalcFracParser.ExprReduceContext ctx) {
+      Fraction res = null;
+      res = visit(ctx.expr()).reduce();
+      return res;
+   }
+
+   @Override public Fraction visitExprMultDivMod(CalcFracParser.ExprMultDivModContext ctx) {
+      Fraction res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+}

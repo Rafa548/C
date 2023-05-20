@@ -1,10 +1,6 @@
-package Ex1;
 import java.io.IOException;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
-
-import HelloLexer;
-import HelloParser;
 
 public class HelloMain {
    public static void main(String[] args) {

@@ -22,8 +22,6 @@ public class array_1_05 {
             System.exit(0);
         }
 
-
-
         String line = input.nextLine();
         String[] inputArray = line.split(" ");
         int numb = 0;
@@ -44,7 +42,6 @@ public class array_1_05 {
                             numb += num;
                         }
                         else {
-                            
                             int num = data.get(number);
                             int num2 = data.get(next_number);
                             numb += num * num2;
@@ -61,7 +58,6 @@ public class array_1_05 {
         if (data.containsKey(last_number)){
             if (last_number.equals("hundred") || last_number.equals("thousand" )|| last_number.equals("million")){
                 int num = data.get(last_number);
-                System.out.println(num);
                 numb *= num;
             }
             else {

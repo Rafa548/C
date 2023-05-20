@@ -1,9 +1,3 @@
-import HelloParser;
-import HelloParser.ByeContext;
-import HelloParser.GreetingsContext;
-import HelloParser.PhraseContext;
-
-package Ex1;
 @SuppressWarnings("CheckReturnValue")
 public class Execute extends HelloBaseVisitor<String> {
 
