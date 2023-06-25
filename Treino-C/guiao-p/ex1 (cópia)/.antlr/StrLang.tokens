@@ -1,0 +1,13 @@
+T__0=1
+T__1=2
+T__2=3
+T__3=4
+String=5
+Var=6
+WS=7
+Comment=8
+Error=9
+'print'=1
+':'=2
+'input('=3
+')'=4
